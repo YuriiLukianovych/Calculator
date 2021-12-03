@@ -96,7 +96,10 @@ document.querySelector('.buttons').addEventListener('click', e => {
                 break;
         }
         finish = true;
-        out.textContent = a;
+        if (a.toString().includes('.')) {
+            out.textContent = a.toFixed(2);
+        } else {out.textContent = a;}
+        
         console.log(a, b, sign);
     }
 
